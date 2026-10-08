@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enquiry | S&M Debtors Associates</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><div class="container header-flex"><a href="index.html"><img src="images/logo.png" alt="logo" class="site-logo"></a><button class="hamburger">&#9776;</button>
+<nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="enquiry.html" class="active">Enquiry</a></li><li><a href="contact.html">Contact</a></li></ul></nav></div></header>
+<main><section class="container">
+<h1>Enquiry Form</h1> <!-- enquiry page heading -->
+<p>Fill this form if you need our services - from flyer</p>
+<!-- Form - Part 1 requirement -->
+<form action="#" method="post">
+  <label for="name">Full Name *</label> <!-- label -->
+  <input type="text" id="name" name="name" required placeholder="Your full name"> <!-- input required -->
+
+  <label for="phone">Phone Number *</label>
+  <input type="tel" id="phone" name="phone" required placeholder="068 211 5398">
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" placeholder="info@creditmends.com">
+
+  <label for="service">Which Service? *</label> <!-- select dropdown -->
+  <select id="service" name="service" required>
+    <option value="">-- Choose Service --</option>
+    <option>DEBT REVIEW REMOVAL</option>
+    <option>JUDGEMENT REMOVAL</option>
+    <option>DEFAULTS ON ACCOUNTS</option>
+    <option>PRESCRIPTION OF ACCOUNTS</option>
+    <option>PAYMENT ARRANGEMENT / ITC CLEARANCE</option>
+  </select>
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" rows="4" placeholder="Tell us about your case"></textarea> <!-- textarea -->
+
+  <button type="submit" class="btn">Submit Enquiry</button> <!-- submit button -->
+</form>
+</section></main>
+<footer><div class="container"><p>&copy; 2026 S&M Debtors Associates</p></div></footer>
+<script src="js/script.js"></script>
+</body></html>
