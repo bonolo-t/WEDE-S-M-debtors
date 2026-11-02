@@ -4,8 +4,10 @@
   <meta charset="UTF-8"> <!-- characters -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive meta - Part 2 -->
   <meta name="description" content="S & M Debtors Associates - Remove debt review within 7 days, judgement removal, defaults, prescription, ITC clearance"> <!-- SEO description -->
+  <meta name="keywords" content="debt review removal, judgment, removal, defaults, prescription, ITC Clearance">
   <title>Home | S & M Debtors Associates</title> <!-- page title -->
   <link rel="stylesheet" href="style.css"> <!-- link to my external CSS - Part 2 -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"> <!-- Leaflet CSS Part 3 -->
 </head>
 <body> <!-- body start -->
   <!-- Header with logo and navigation -->
@@ -85,6 +87,69 @@
            alt="Debt review removal office"
            class="responsive-img">
     </section>
+
+    <!-- PART 3 - Tabs for About -->
+<section class="container">
+  <h2>WHY CHOOSE US</h2>
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="tab-fast">FAST</button>
+    <button class="tab-btn" data-tab="tab-secure">SECURE</button>
+    <button class="tab-btn" data-tab="tab-effective">EFFECTIVE</button>
+  </div>
+  <div id="tab-fast" class="tab-panel active">
+    <p>We remove debt review within 7 days - FAST service.</p>
+  </div>
+  <div id="tab-secure" class="tab-panel">
+    <p>Your information is secure and discreet - SECURE.</p>
+  </div>
+  <div id="tab-effective" class="tab-panel">
+    <p>Results that matter - EFFECTIVE removal.</p>
+  </div>
+</section>
+
+<!-- PART 3 - Map - location based feature -->
+<section class="container">
+  <h2>OUR LOCATION - GAUTENG OFFICE</h2>
+  <div id="map"></div> <!-- map will load here with JS -->
+</section>
+
+<!-- PART 3 - Gallery with lightbox -->
+<section class="container">
+  <h2>OUR WORK GALLERY</h2>
+  <div class="gallery">
+    <img src="images/office1.jpg" alt="Debt review removal office Gauteng - professional service" loading="lazy">
+    <img src="images/office2.jpg" alt="Judgement removal documents cleared" loading="lazy">
+    <img src="images/client.jpg" alt="Happy client after ITC clearance" loading="lazy">
+  </div>
+</section>
+
+<!-- PART 3 - Accordion FAQ -->
+<section class="container">
+  <h2>FREQUENTLY ASKED QUESTIONS</h2>
+  <div class="accordion">
+    <div class="accordion-header"><span>How long does debt review removal take?</span><span>+</span></div>
+    <div class="accordion-content"><p>Within 7 days - FAST, SECURE, EFFECTIVE.</p></div>
+  </div>
+  <div class="accordion">
+    <div class="accordion-header"><span>Do you do debt counselling?</span><span>+</span></div>
+    <div class="accordion-content"><p>No, we ONLY do removal - not counselling.</p></div>
+  </div>
+  <div class="accordion">
+    <div class="accordion-header"><span>Which areas do you cover?</span><span>+</span></div>
+    <div class="accordion-content"><p>Gauteng, Mpumalanga, Limpopo - 3 offices.</p></div>
+  </div>
+</section>
+
+<!-- PART 3 - Modal popup -->
+<div id="welcomeModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2>REMOVE YOUR DEBT REVIEW IN 7 DAYS!</h2>
+    <p>We are the best - Professional | Discreet | Results Driven</p>
+    <a href="enquiry.html" class="btn">Enquire Now</a>
+  </div>
+</div>
+<div id="lightbox" class="lightbox"><img id="lightbox-img" src="" alt="enlarged"></div>
   </main>
 
   <!-- Footer with 3 columns -->
@@ -111,6 +176,10 @@
   </footer>
 
   <!-- Link to JavaScript file -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/form-validation.js"></script>
   <script src="js/script.js"></script>
+
 </body>
 </html>

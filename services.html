@@ -8,6 +8,23 @@
 <main><section class="container">
 <h1>OUR SERVICES</h1>
 <p>REMOVE YOUR DEBT REVIEW WITHIN 7 DAYS!</p>
+
+<!-- PART 3 - Dynamic Content - search filter sort -->
+<div style="display:flex;gap:10px;margin:15px 0;flex-wrap:wrap">
+  <input type="text" id="searchInput" placeholder="Search services..." style="flex:1;padding:8px">
+  <select id="categoryFilter" style="padding:8px">
+    <option value="all">All Categories</option>
+    <option value="services">Services</option>
+    <option value="products">Products</option>
+  </select>
+  <select id="sortSelect" style="padding:8px">
+    <option value="default">Sort by</option>
+    <option value="name-asc">Name A-Z</option>
+    <option value="name-desc">Name Z-A</option>
+  </select>
+</div>
+<div id="product-listings" class="grid-3"></div> 
+
 <div class="grid-3">
 <div class="card"><h3>1. DEBT REVIEW REMOVAL</h3><p>We remove your debt review status legally and efficiently.</p></div>
 <div class="card"><h3>2. JUDGEMENT REMOVAL</h3><p>We assist in removing judgements from your credit profile.</p></div>

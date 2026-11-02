@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bonolo-t.github.io/WEDE-S-M-debtors/sitemap.xml
