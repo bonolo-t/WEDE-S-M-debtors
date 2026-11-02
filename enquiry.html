@@ -1,33 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Enquiry form - check cost and availability for debt review removal within 7 days">
-<title>Enquiry | S&M Debtors Associates</title><link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enquiry - check cost and availability for debt review removal within 7 days">
+  <title>Enquiry | S&M Debtors Associates</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
 <body>
-<header><div class="container header-flex"><a href="index.html"><img src="images/logo.png" alt="logo" class="site-logo"></a><button class="hamburger">&#9776;</button>
-<nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="enquiry.html" class="active">Enquiry</a></li><li><a href="contact.html">Contact</a></li></ul></nav></div></header>
-<main><section class="container">
-<h1>Enquiry Form - Check Cost & Availability</h1>
-<p>Fill this form - we show cost and availability after validation</p>
-<div class="grid-2">
-<div>
-<form id="enquiryForm" novalidate>
-  <label for="enq-name">Full Name *</label><input type="text" id="enq-name" required><div class="error"></div>
-  <label for="enq-email">Email *</label><input type="email" id="enq-email" required><div class="error"></div>
-  <label for="enq-phone">Phone *</label><input type="tel" id="enq-phone" required placeholder="068 211 5398"><div class="error"></div>
-  <label for="enq-service">Which Service? *</label>
-  <select id="enq-service" required><option value="">-- Choose --</option><option>DEBT REVIEW REMOVAL</option><option>JUDGEMENT REMOVAL</option><option>DEFAULTS ON ACCOUNTS</option><option>PRESCRIPTION OF ACCOUNTS</option><option>PAYMENT ARRANGEMENT / ITC CLEARANCE</option></select><div class="error"></div>
-  <label for="enq-message">Message *</label><textarea id="enq-message" rows="4" required></textarea><div class="error"></div>
-  <button type="submit" class="btn">Submit Enquiry</button>
-</form>
-<div id="enquiryResponse" style="display:none;margin-top:15px;padding:15px;background:#E8F5E9;border-radius:5px;border-left:4px solid var(--green)"></div>
-</div>
-<div><h2>Our Location</h2><div id="map"></div><h3>Cost & Availability</h3><p>Debt Review R1500-R3000 in 7 days, Judgement R1200-R2500 14-21 days, Defaults R800 per account 5 days.</p></div>
-</div>
-</section></main>
-<div id="lightbox" class="lightbox"><img id="lightbox-img" src="" alt=""></div>
-<footer><div class="container"><p>&copy; <span id="current-year"></span> S&M Debtors Associates</p></div></footer>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="js/main.js"></script><script src="js/form-validation.js"></script><script src="js/script.js"></script>
-</body></html>
+  <header>
+    <div class="container header-flex">
+      <a href="index.html"><img src="images/logo.png" alt="DA Logo" class="site-logo"></a>
+      <button class="hamburger">&#9776;</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="enquiry.html" class="active">Enquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <h1>Enquiry Form - Check Cost & Availability</h1>
+      <p>Fill this form - we show cost and availability after validation</p>
+      <div class="grid-2">
+        <div>
+          <form id="enquiryForm" novalidate>
+            <label for="enq-name">Full Name *</label>
+            <input type="text" id="enq-name" required>
+            <div class="error"></div>
+
+            <label for="enq-email">Email *</label>
+            <input type="email" id="enq-email" required placeholder="info@creditmends.com">
+            <div class="error"></div>
+
+            <label for="enq-phone">Phone *</label>
+            <input type="tel" id="enq-phone" required placeholder="068 211 5398">
+            <div class="error"></div>
+
+            <label for="enq-service">Which Service? *</label>
+            <select id="enq-service" required>
+              <option value="">-- Choose --</option>
+              <option>DEBT REVIEW REMOVAL</option>
+              <option>JUDGEMENT REMOVAL</option>
+              <option>DEFAULTS ON ACCOUNTS</option>
+              <option>PRESCRIPTION OF ACCOUNTS</option>
+              <option>PAYMENT ARRANGEMENT / ITC CLEARANCE</option>
+            </select>
+            <div class="error"></div>
+
+            <label for="enq-message">Message *</label>
+            <textarea id="enq-message" rows="4" required placeholder="Tell us about your case"></textarea>
+            <div class="error"></div>
+
+            <button type="submit" class="btn">Submit Enquiry</button>
+          </form>
+          <div id="enquiryResponse" style="display:none;margin-top:15px;padding:15px;background:#E8F5E9;border-radius:5px;border-left:4px solid #2A9E4A"></div>
+        </div>
+        <div>
+          <h2>Cost & Availability</h2>
+          <div class="card">
+            <p><strong>DEBT REVIEW REMOVAL:</strong> R1500-R3000, 7 days</p>
+            <p><strong>JUDGEMENT REMOVAL:</strong> R1200-R2500, 14-21 days</p>
+            <p><strong>DEFAULTS:</strong> R800 per account, 5 days</p>
+          </div>
+          <h2 style="margin-top:15px">Our Location</h2>
+          <div id="map"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox"><img id="lightbox-img" src="" alt="enlarged"></div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="current-year"></span> S&M Debtors Associates | Email: info@creditmends.com | +27 13 170 5233</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/form-validation.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
